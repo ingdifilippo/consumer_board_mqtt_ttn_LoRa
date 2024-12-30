@@ -174,29 +174,33 @@ void onMqttMessage(int messageSize) {
   tft.setTextColor(TFT_GREEN);
   tft.println(device);
   tft.setTextColor(TFT_WHITE);
-  tft.println();
+  tft.println("\nData e ora ricezione: " );
+  tft.setTextColor(TFT_GREEN);
   tft.println(rcv);
+  tft.setTextColor(TFT_WHITE);
 
-  tft.println("Uplink hr: ");
+  tft.println("\nUplink hr: ");
   tft.setTextColor(TFT_GREEN);
   tft.println(hr);
-   tft.setTextColor(TFT_WHITE);
+  tft.setTextColor(TFT_WHITE);
   tft.println();
 
-  tft.println("Uplink temp: ");
+  tft.println("\nUplink temp: ");
   tft.setTextColor(TFT_GREEN);
   tft.println(tmp);
   tft.setTextColor(TFT_WHITE);
   tft.println();
-
-  Serial.println(device);
-  tft.setTextColor(TFT_PURPLE);
-  Serial.println("Ricezione messaggio: ");
-  tft.setTextColor(TFT_GREEN);
-  Serial.println(rcv);
-  Serial.println();
   
-  Serial.println("Uplink msg: ");
+  Serial.println("dispositivo: ");
+  Serial.println(device);
+  Serial.println("Data e ora ricezione: " );
+  Serial.println(rcv);
+
+  Serial.println("Uplink hr: ");
   Serial.println(hr);
   Serial.println();
+  Serial.println("Uplink temp: ");
+  Serial.println(tmp);
+  Serial.println();
+ 
 }
